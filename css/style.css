@@ -1,8 +1,41 @@
+/* ================= GLOBAL ================= */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #212529;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    padding: 15px 0;
+}
+
+.navbar-brand {
+    font-size: 22px;
+}
+
+.nav-link {
+    font-size: 16px;
+}
+
+.nav-link:hover {
+    color: #86b7fe !important;
+}
+
+/* ================= ABOUT ME ================= */
+
 #about {
     background-color: #f8f9fa;
     padding: 60px 0;
 }
-
 
 #about h2 {
     font-size: 32px;
@@ -10,10 +43,8 @@
     color: #212529;
 }
 
-
 #about h3 {
     font-size: 28px;
-    font-weight: bold;
     color: #0d6efd;
 }
 
@@ -38,13 +69,88 @@
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-
 #about .badge {
     font-size: 14px;
     padding: 10px 15px;
 }
 
+/* ================= MY PORTFOLIO ================= */
 
+#portfolio {
+    background-color: #ffffff;
+    padding: 70px 0;
+}
+
+#portfolio h2 {
+    font-size: 32px;
+    color: #212529;
+}
+
+.portfolio-card {
+    border: 1px solid #e9ecef;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.portfolio-card h3 {
+    font-size: 22px;
+    line-height: 1.5;
+    color: #212529;
+}
+
+.portfolio-card h4 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #0d6efd;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+.portfolio-card p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #555;
+}
+
+.portfolio-card .badge {
+    font-size: 13px;
+    padding: 9px 12px;
+}
+
+/* ================= REFLECTION ================= */
+
+.reflection-box {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 4px solid #0d6efd;
+}
+
+.reflection-box p {
+    margin-bottom: 12px;
+}
+
+.reflection-box strong {
+    color: #212529;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 992px) {
+
+    #portfolio {
+        padding: 50px 0;
+    }
+
+}
 
 @media (max-width: 768px) {
 
@@ -52,7 +158,8 @@
         padding: 40px 15px;
     }
 
-    #about h2 {
+    #about h2,
+    #portfolio h2 {
         font-size: 26px;
     }
 
@@ -64,6 +171,40 @@
     .profile-img {
         width: 180px;
         height: 180px;
+    }
+
+    #portfolio {
+        padding: 40px 15px;
+    }
+
+    .portfolio-card .card-body {
+        padding: 20px !important;
+    }
+
+    .portfolio-card h3 {
+        font-size: 19px;
+    }
+
+    .portfolio-card h4 {
+        font-size: 17px;
+    }
+
+    .portfolio-card p {
+        font-size: 14px;
+    }
+
+    .reflection-box {
+        padding: 15px;
+    }
+
+    .navbar .container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .navbar-nav {
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
 }
